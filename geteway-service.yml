@@ -17,8 +17,8 @@ spring:
           enabled: true
       routes:
         - id: ws-producto
-#          uri: http://localhost:8005/productos
-          uri: lb//ws-producto
+          uri: http://localhost:8005/productos
+#          uri: lb//ws-producto
           predicates:
             - Path=/productos/**
   #application:
