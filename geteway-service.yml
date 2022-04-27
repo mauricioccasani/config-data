@@ -3,12 +3,12 @@ server:
   port: 8083
 eureka:
   client:
-    registryWithEureka: true
-    fetchRegistry: true
+#    registryWithEureka: true
+#    fetchRegistry: true
     service-url:
       defaultZone: http://localhost:8082/eureka/
-    instance:
-      hostname: localhost  
+#    instance:
+#      hostname: localhost  
 spring:
   cloud:
     gateway:
@@ -17,7 +17,8 @@ spring:
           enabled: true
       routes:
         - id: ws-producto
-          uri: http://localhost:8005/productos
+#          uri: http://localhost:8005/productos
+          uri: lb//ws-producto
           predicates:
             - Path=/productos/**
   #application:
