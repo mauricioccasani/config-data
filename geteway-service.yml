@@ -12,9 +12,9 @@ spring:
         locator:
           enabled: true
       routes:
-        - id: example-service
-          uri: http://localhost:8093
+        - id: ws-producto
+          uri: http://localhost:8005/productos
           predicates:
-            - Path=/examples/**
+            - Path=/productos/**
   #application:
   #  name: registry-service          
