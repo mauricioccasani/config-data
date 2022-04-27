@@ -1,2 +1,7 @@
 server:
   port: 8005
+eureka:
+  client:
+    registryWithEureka: true
+    fetchRegistry: true
+    uri: http://localhost:8082/eureka/
